@@ -12,7 +12,7 @@ public class App {
 		
 		contaDaAna.titular = "Ana Gomes";
 		contaDaAna.numero = "111-98";
-		contaDaAna.tipo = "Corrente";
+		contaDaAna.setTipo("Corrente");
 		contaDaAna.ativa = true;
 		contaDaAna.chequeEspecial = 200;
 		contaDaAna.depositar(100);
@@ -29,10 +29,10 @@ public class App {
 		contaDaAna.mostrarSaldoDaConta();
 		contaDaAna.depositar(100);
 		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.getSaldo();
+		double valorSaldo = contaDaAna.getSaldo();
 		
-		int a = somar(10, 5);
-		
+		System.out.println("*****"+valorSaldo);
+		System.out.println(contaDaAna.getTitular());
 		
 		
 	}
