@@ -1,20 +1,18 @@
 package br.senai.sp.jandira;
 
+import br.senai.sp.jandira.model.Cliente;
 import br.senai.sp.jandira.model.Conta;
 
 public class App {
 
 	public static void main(String[] args) {
-
-		
 		Conta contaDaAna = new Conta();
-		Conta contaDoJoao = new Conta();
 		
-		contaDaAna.titular = "Ana Gomes";
-		contaDaAna.numero = "111-98";
+//		contaDaAna.setTitular ("Ana Gomes");
+		contaDaAna.setNumero ( "111-98");
 		contaDaAna.setTipo("Corrente");
-		contaDaAna.ativa = true;
-		contaDaAna.chequeEspecial = 200;
+		contaDaAna.setAtiva (true);
+		contaDaAna.setChequeEspecial (200);
 		contaDaAna.depositar(100);
 		contaDaAna.mostrarSaldoDaConta();
 		contaDaAna.depositar(30);
@@ -31,15 +29,15 @@ public class App {
 		contaDaAna.mostrarSaldoDaConta();
 		double valorSaldo = contaDaAna.getSaldo();
 		
-		System.out.println("*****"+valorSaldo);
-		System.out.println(contaDaAna.getTitular());
+		System.out.println("***Valor do saldo:"+valorSaldo);
+		System.out.println("Nome:" + contaDaAna.getTitular());
+		System.out.println("Conta:" + contaDaAna.getNumero());
+		System.out.println("Limite:" + contaDaAna.getChequeEspecial());
+		System.out.println("tipo:conta " + contaDaAna.getTipo());
 		
+//		Cliente cliente = new cliente();
 		
 	}
 	
-	public static int somar(int valor1, int valor2) {
-		int resultado = valor1 + valor2;
-		return resultado;
 	}
 
-}

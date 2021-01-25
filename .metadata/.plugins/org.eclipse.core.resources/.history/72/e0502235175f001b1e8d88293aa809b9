@@ -1,0 +1,13 @@
+package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Cliente;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		
+		Cliente pedro = new Cliente();
+
+	}
+
+}
